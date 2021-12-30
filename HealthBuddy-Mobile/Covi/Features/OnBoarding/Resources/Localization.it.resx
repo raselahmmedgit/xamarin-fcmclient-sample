@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Il permesso di utilizzare il Bluetooth è stato negato. Per procedere, autorizza l'utilizzo del bluetooth nelle impostazioni dell'applicazione.</value>
+  </data>
+  <data name="BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Il Bluetooth non è attualmente disponibile. Il Bluetooth non è supportato dal tuo dispositivo o è disabilitato. Per favore, controlla le impostazioni Bluetooth del dispositivo.</value>
+  </data>
+  <data name="BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Errore Bluetooth.</value>
+  </data>
+  <data name="BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Il tuo dispositivo ha alcune limitazioni hardware e potrebbe essere invisibile ad altri dispositivi tramite Bluetooth.</value>
+  </data>
+  <data name="BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Avviso Bluetooth.</value>
+  </data>
+  <data name="OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Su misura per te</value>
+  </data>
+  <data name="OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Affinché questa app funzioni e aiuti a salvare vite umane, connettiti tramite Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% anonimo
+Non verremo a conoscenza del tuo nome o della tua posizione</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Questa app utilizza il Bluetooth per determinare se sei stato in contatto con chi ha contratto il virus</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Una volta data la tua autorizzazione, utilizzeremo solo il Bluetooth e non la tua posizione</value>
+  </data>
+  <data name="OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Connettiti con Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Connettività</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Consigli su misura per la tua categoria di profilo</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Rischi specifici per area, raccomandazioni e regole di comportamento</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>NESSUNA informazione privata condivisa</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Realizzato per te</value>
+  </data>
+  <data name="OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Passaggio successivo</value>
+  </data>
+  <data name="OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Affinché questa app funzioni e aiuti a salvare vite umane, attiva le notifiche</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Il tuo account è privato e riservato. Non raccoglieremo alcuna informazione personale sul tuo conto</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Non raccoglieremo dati quali indirizzo e-mail o numero di cellulare, quindi non saremo in grado di inviarti messaggi di posta elettronica o SMS</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Le notifiche verranno inviate solo tramite l'app. Puoi disattivare le notifiche nelle Impostazioni</value>
+  </data>
+  <data name="OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Informazioni importanti</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Tutte le informazioni trasmesse vengono crittografate</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>NESSUNA informazione è collegata alla tua identità</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>NESSUNA informazione personale lascia il tuo telefono</value>
+  </data>
+  <data name="OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Completamente anonimo</value>
+  </data>
+  <data name="OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+</root>

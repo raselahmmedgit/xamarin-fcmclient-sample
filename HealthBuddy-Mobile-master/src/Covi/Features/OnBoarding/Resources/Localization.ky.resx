@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Bluetooth'ду колдонууга уруксат берилген жок. Улантуу үчүн, колдонмонун жөндөөлөрүнөн bluetooth'ду колдонууга уруксат бериңиз.</value>
+  </data>
+  <data name="BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Bluetooth учурда жеткиликтүү эмес. Bluetooth түзмөгүңүздө колдоого алынбайт же өчүрүлгөн. Түзмөктүн bluetooth жөндөөлөрүн текшериңиз.</value>
+  </data>
+  <data name="BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Bluetooth катасы.</value>
+  </data>
+  <data name="BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Түзмөгүңүздө айрым аппараттык чектөөлөр бар жана ал Bluetooth аркылуу башка түзмөктөргө көрүнбөй калышы мүмкүн.</value>
+  </data>
+  <data name="BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Bluetooth эскертүүсү.</value>
+  </data>
+  <data name="OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Сиз үчүн ылайыкталган</value>
+  </data>
+  <data name="OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Бул колдонмону иштетүү жана адам өмүрлөрүн сактап калуусу үчүн, bluetooth'га туташыңыз</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% жашыруун
+Биз сиздин атыңызды же жайгашкан жериңизди билбейбиз</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Бул колдонмо оорулуу адам менен байланышта болуп же болбогонуңузга көз салуу үчүн, bluetooth'ду колдонот</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Уруксат берсеңиз, жайгашкан жерди эмес, bluetooth'ду гана колдонобуз</value>
+  </data>
+  <data name="OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Bluetooth'га туташыңыз</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Байланыш</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Профилиңиздин категориясына ылайыкталган сунуштар</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Аймакка мүнөздүү тобокелдиктер, сунуштар жана жүрүм-турум эрежелери</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>Жеке маалымат бөлүшүлбөйт</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Сиз үчүн жасалган</value>
+  </data>
+  <data name="OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Кийинки кадам</value>
+  </data>
+  <data name="OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Бул колдонмону иштетүү жана адам өмүрлөрүн сактап калуусу үчүн, билдирмелерге уруксат бериңиз</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Аккаунтуңуздун купуялыгы сакталат. Бизде сиздин жеке маалыматыңыз жок</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Бизде электрондук почта дарегиңиз же мобилдик номериңиз жок, андыктан сизге эч качан электрондук почта аркылуу билдирүү же SMS жөнөтпөйбүз</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Билдирмелер колдонмо аркылуу гана жөнөтүлөт. Билдирмелерди Жөндөөлөрдөн өчүрсөңүз болот</value>
+  </data>
+  <data name="OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Маанилүү маалымат</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Бардык маалымат шифрлөө жолу менен берилет</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>ЭЧ КАНДАЙ маалымат инсандыгыңызга байланыштырылбайт</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>ЭЧ КАНДАЙ жеке маалымат телефонуңузду калтырбайт</value>
+  </data>
+  <data name="OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Толугу менен жашыруун</value>
+  </data>
+  <data name="OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Купуялык</value>
+  </data>
+</root>

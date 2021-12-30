@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Άρνηση χρήσης του bluetooth. Για να συνεχίσεις, ενεργοποίησε τη χρήση του bluetooth στις ρυθμίσεις της εφαρμογής.</value>
+  </data>
+  <data name="BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Το bluetooth είναι προσωρινά μη διαθέσιμο. Δεν υποστηρίζεται από τη συσκευή σου ή είναι απενεργοποιημένο. Έλεγξε τις ρυθμίσεις bluetooth της συσκευής.</value>
+  </data>
+  <data name="BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Σφάλμα bluetooth.</value>
+  </data>
+  <data name="BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Η συσκευή σου έχει περιορισμούς υλικού και ενδέχεται να μην είναι ορατή από άλλες συσκευές μέσω Bluetooth.</value>
+  </data>
+  <data name="BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Προειδοποίηση bluetooth.</value>
+  </data>
+  <data name="OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Φτιαγμένο στα μέτρα σου</value>
+  </data>
+  <data name="OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Για να λειτουργήσει η εφαρμογή και να σώσει ζωές, συνδέσου με το Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% ανωνυμία
+Δεν γνωρίζουμε το όνομα ή την τοποθεσία σου</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Η εφαρμογή χρησιμοποιεί Bluetooth για να εντοπίσει αν έχεις έρθει έρθει σε επαφή με κάποιον που έχει μολυνθεί</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Θα χρησιμοποιήσουμε το bluetooth και όχι την τοποθεσία</value>
+  </data>
+  <data name="OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Σύνδεση με Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Συνδεσιμότητα</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Προτάσεις προσαρμοσμένες στην κατηγορία προφίλ σου</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Για να λειτουργήσει η εφαρμογή και να σώσει ζωές, ενεργοποίησε τις ειδοποιήσεις</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Ο λογαριασμός σου είναι προσωπικός και απόρρητος. Δεν αποθηκεύουμε προσωπικά στοιχεία.</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Δεν αποθηκεύουμε το e-mail ούτε το τηλέφωνό σου, επομένως δεν θα σου στείλουμε ποτέ μήνυμα.</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Οι ειδοποιήσεις στέλνονται αποκλειστικά μέσω της εφαρμόγής. Μπορείς να τις απενεργοποιήσεις στις Ρυθμίσεις.</value>
+  </data>
+  <data name="OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Σημαντικές πληροφορίες</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Πλήρης ανωνυμία</value>
+  </data>
+  <data name="OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Απόρρητο</value>
+  </data>
+</root>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Дозволата за користење Bluetooth е одбиена. Ве молиме, дајте дозвола за користење на Bluetooth во поставките на апликацијата за да продолжите.</value>
+  </data>
+  <data name="BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Bluetooth во моментот е недостапен. Или Bluetooth не е поддржан од вашиот уред или е оневозможен. Ве молиме, проверете ги поставките за Bluetooth-уредот.</value>
+  </data>
+  <data name="BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Bluetooth грешка.</value>
+  </data>
+  <data name="BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Вашиот уред има некои ограничувања на хардверот и може да биде невидлив за други уреди преку Bluetooth.</value>
+  </data>
+  <data name="BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Предупредување за Bluetooth.</value>
+  </data>
+  <data name="OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Прилагодено за вас</value>
+  </data>
+  <data name="OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>За оваа апликација да работи и да ви помогне да спасите животи, ве молиме поврзете се со Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% анонимно
+Ние не го знаеме вашето име или локација</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Оваа апликација користи Bluetooth за да трага ако сте биле во контакт со некој кој е заразен</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Ние ќе го користиме само Bluetooth, а не локацијата кога ќе дадете дозвола</value>
+  </data>
+  <data name="OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Поврзи со Bluetooth</value>
+  </data>
+  <data name="OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Поврзаност</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Препораки прилагодени на категоријата на вашиот профил</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Посебни ризици, препораки и правила за однесување во областа</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>НЕ се споделуваат приватни информации</value>
+  </data>
+  <data name="OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Направено за вас</value>
+  </data>
+  <data name="OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Следен чекор</value>
+  </data>
+  <data name="OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>За оваа апликација да работи и да ви помогне да спасите животи, ве молиме, дозволете известувања</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Вашата сметка е приватна и доверлива. Немаме никакви лични информации за вас</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Ние ја немаме вашата адреса за е-пошта или мобилен број, затоа никогаш нема да ви испраќаме е-пошта или СМС порака</value>
+  </data>
+  <data name="OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Известувањата ќе бидат испратени само преку апликацијата. Може да ги исклучите известувањата во Поставки</value>
+  </data>
+  <data name="OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Важни информации</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Сите информации се пренесуваат преку криптирање</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>НЕ се поврзани информации со вашиот идентитет</value>
+  </data>
+  <data name="OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>НЕ излегуваат никакви лични информации од вашиот телефон</value>
+  </data>
+  <data name="OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Целосно анонимно</value>
+  </data>
+  <data name="OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Приватност</value>
+  </data>
+</root>

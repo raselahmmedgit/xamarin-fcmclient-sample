@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>A felhasználónévben csak a latin ábécé betűi és számjegyek használhatók</value>
+  </data>
+  <data name="CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Jelszó megerősítése</value>
+  </data>
+  <data name="CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Jelszó megerősítése</value>
+  </data>
+  <data name="CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>További információ</value>
+  </data>
+  <data name="CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Ha Ön hivatalos egészségügyi dolgozó, akkor kapcsolja be ezt az opciót. Ez lehetővé teszi Önnek kódok generálását, amelyeket elküldhet a betegeinek, akik módosíthaják az állapotukat.</value>
+  </data>
+  <data name="CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Az orvosi azonosító nem lehet üres</value>
+  </data>
+  <data name="CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Egészségügyi azonosító</value>
+  </data>
+  <data name="CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Egészségügyi azonosító</value>
+  </data>
+  <data name="CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Következő lépés</value>
+  </data>
+  <data name="CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Hivatalos egészségügyi dolgozó vagyok</value>
+  </data>
+  <data name="CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Profil létrehozása</value>
+  </data>
+  <data name="CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Jelszavának legalább az alábbiakat kell tartalmaznia:</value>
+  </data>
+  <data name="CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="CreateProfile_Password_Text" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 karakter</value>
+  </data>
+  <data name="CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 nagybetű</value>
+  </data>
+  <data name="CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 kisbetű</value>
+  </data>
+  <data name="CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 speciális szimbólum és egy számjegy</value>
+  </data>
+  <data name="CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>A felhasználónév nem lehet üres.</value>
+  </data>
+  <data name="CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>A jelszónak és a jelszó megerősítésének meg kell egyeznie.</value>
+  </data>
+  <data name="CreateProfile_Title_Text" xml:space="preserve">
+    <value>Hozza létre anonim profilját</value>
+  </data>
+  <data name="CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Felhasználónév</value>
+  </data>
+  <data name="CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Válasszon felhasználónevet</value>
+  </data>
+  <data name="SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Már van fiókja?</value>
+  </data>
+  <data name="SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Bejelentkezés</value>
+  </data>
+</root>

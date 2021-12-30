@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Во корисничкото име се дозволени само латински букви и броеви</value>
+  </data>
+  <data name="CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Потврди лозинка</value>
+  </data>
+  <data name="CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Потврди лозинка</value>
+  </data>
+  <data name="CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Повеќе информации</value>
+  </data>
+  <data name="CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Ако сте официјален здравствен работник, вклучете ја оваа опција. Ова ќе ви овозможи да ги генерирате вашите кодови за да им ги испратите на вашите пациенти за да можат да го променат статусот.</value>
+  </data>
+  <data name="CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Медицинската легитимација не треба да биде празна</value>
+  </data>
+  <data name="CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Здравствена легитимација</value>
+  </data>
+  <data name="CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Здравствена легитимација</value>
+  </data>
+  <data name="CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Следен чекор</value>
+  </data>
+  <data name="CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Јас сум официјален здравствен работник</value>
+  </data>
+  <data name="CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Креирај профил</value>
+  </data>
+  <data name="CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Вашата лозинка мора да содржи најмалку:</value>
+  </data>
+  <data name="CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Лозинка</value>
+  </data>
+  <data name="CreateProfile_Password_Text" xml:space="preserve">
+    <value>Лозинка</value>
+  </data>
+  <data name="CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 знаци</value>
+  </data>
+  <data name="CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 голема буква</value>
+  </data>
+  <data name="CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 мала буква</value>
+  </data>
+  <data name="CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 специјален знак и цифра</value>
+  </data>
+  <data name="CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>Корисничкото име не треба да биде празно.</value>
+  </data>
+  <data name="CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Лозинката и лозинката за потврда треба да бидат исти.</value>
+  </data>
+  <data name="CreateProfile_Title_Text" xml:space="preserve">
+    <value>Создадете ваш анонимен профил</value>
+  </data>
+  <data name="CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Корисничко име</value>
+  </data>
+  <data name="CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Избери корисничко име</value>
+  </data>
+  <data name="SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Веќе имате профил?</value>
+  </data>
+  <data name="SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Најави се</value>
+  </data>
+</root>

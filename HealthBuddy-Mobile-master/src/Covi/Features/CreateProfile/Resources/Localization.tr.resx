@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+              <xs:attribute name="type" type="xsd:string"/>
+              <xs:attribute name="mimetype" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string"/>
+              <xs:attribute name="name" type="xsd:string"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+                <xs:element minOccurs="0" name="comment" ns1:Ordinal="2" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" ns1:Ordinal="1" type="xsd:string" use="required"/>
+              <xs:attribute name="type" ns1:Ordinal="3" type="xsd:string"/>
+              <xs:attribute name="mimetype" ns1:Ordinal="4" type="xsd:string"/>
+              <xs:attribute ref="xml:space"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="value" ns1:Ordinal="1" type="xsd:string"/>
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Kullanıcı adında yalnızca Latin harfleri ve rakamlar kullanmaya izin verilir</value>
+  </data>
+  <data name="CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Parolayı onayla</value>
+  </data>
+  <data name="CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Parolayı onayla</value>
+  </data>
+  <data name="CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Daha fazla bilgi</value>
+  </data>
+  <data name="CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Resmî bir sağlık çalışanıysanız lütfen bu seçeneği etkinleştirin. Bu, hastalarınıza durumlarını değiştirebilmeleri için göndereceğiniz kodları oluşturmanıza olanak tanır.</value>
+  </data>
+  <data name="CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Tıbbi Kimlik boş bırakılmamalıdır</value>
+  </data>
+  <data name="CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Sağlık Kimliği</value>
+  </data>
+  <data name="CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Sağlık Kimliği</value>
+  </data>
+  <data name="CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Sonraki adım</value>
+  </data>
+  <data name="CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Ben resmî bir sağlık görevlisiyim</value>
+  </data>
+  <data name="CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Profil oluştur</value>
+  </data>
+  <data name="CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Parolanız en azından şunları içermelidir:</value>
+  </data>
+  <data name="CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="CreateProfile_Password_Text" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 karakter</value>
+  </data>
+  <data name="CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 büyük harf</value>
+  </data>
+  <data name="CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 küçük harf</value>
+  </data>
+  <data name="CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 özel sembol ve bir rakam</value>
+  </data>
+  <data name="CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>Kullanıcı adı boş bırakılamaz.</value>
+  </data>
+  <data name="CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Parola ve onay parolası aynı olmalıdır.</value>
+  </data>
+  <data name="CreateProfile_Title_Text" xml:space="preserve">
+    <value>Anonim profilinizi oluşturun</value>
+  </data>
+  <data name="CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
+  </data>
+  <data name="CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Bir kullanıcı adı seçin</value>
+  </data>
+  <data name="SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Zaten bir hesabınız var mı?</value>
+  </data>
+  <data name="SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Giriş yap</value>
+  </data>
+</root>
