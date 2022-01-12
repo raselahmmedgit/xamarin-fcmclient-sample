@@ -54,12 +54,12 @@ namespace Covi.Features.AnonymousProfile.Services
                 var generatedKey = Guid.NewGuid().ToString();
                 await _secretsProvider.InitializeAsync(generatedKey).ConfigureAwait(false);
 
-                var metadata = await _metadataService.FetchMetadataIfNeededAsync();
+                //var metadata = await _metadataService.FetchMetadataIfNeededAsync();
 
-                UserAccountInfo userAccount = new UserAccountInfo();
-                UserStatus userStatus = null;
-                Token token = null;
-                await _authenticationInfoService.InitUserInfoAsync(metadata, userAccount, userStatus, token).ConfigureAwait(false);
+                //UserAccountInfo userAccount = new UserAccountInfo();
+                //UserStatus userStatus = null;
+                //Token token = null;
+                //await _authenticationInfoService.InitUserInfoAsync(metadata, userAccount, userStatus, token).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
