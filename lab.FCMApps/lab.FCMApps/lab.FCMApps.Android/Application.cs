@@ -42,8 +42,7 @@ namespace lab.FCMApps.Droid
             //Handle notification when app is closed here
             CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
             {
-
-
+                var a = s;
             };
         }
     }
