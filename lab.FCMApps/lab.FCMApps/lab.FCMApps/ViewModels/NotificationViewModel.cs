@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace lab.FCMApps.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class NotificationViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public NotificationViewModel()
         {
-            Title = "About";
+            Title = "Notification";
         }
     }
 }

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="lab.FCMApps.Views.AboutPage"
              xmlns:vm="clr-namespace:lab.FCMApps.ViewModels"
+             x:Class="lab.FCMApps.Views.NotificationPage"
              Title="{Binding Title}">
-    
+
     <!--<ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:NotificationViewModel />
     </ContentPage.BindingContext>-->
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -35,7 +35,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="About Page" FontAttributes="Bold"/>
+                                <Span Text="Notification Page" FontAttributes="Bold"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

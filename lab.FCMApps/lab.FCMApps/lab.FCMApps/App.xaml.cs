@@ -1,9 +1,7 @@
-﻿using lab.FCMApps.Services;
-using lab.FCMApps.Views;
+﻿using lab.FCMApps.Views;
 using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace lab.FCMApps
 {
@@ -14,8 +12,7 @@ namespace lab.FCMApps
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new MainPage();
 
             CrossFirebasePushNotification.Current.Subscribe("all");
             CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
@@ -23,7 +20,7 @@ namespace lab.FCMApps
 
         private void Current_OnTokenRefresh(object source, FirebasePushNotificationTokenEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine($"Token: {e.Token}");
+            Console.WriteLine($"App - Current_OnTokenRefresh: {e.Token}");
         }
 
         protected override void OnStart()

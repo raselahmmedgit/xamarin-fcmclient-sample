@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Plugin.FirebasePushNotification;
+using Android.Content;
 
 namespace lab.FCMApps.Droid
 {
@@ -21,6 +22,13 @@ namespace lab.FCMApps.Droid
 
             FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+            FirebasePushNotificationManager.ProcessIntent(this, intent);
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
