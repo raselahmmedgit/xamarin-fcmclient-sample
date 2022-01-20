@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Runtime;
 using Firebase;
+using lab.FCMApps.ViewModels;
 using lab.FCMApps.Views;
 using Plugin.FirebasePushNotification;
 using System;
@@ -43,48 +44,162 @@ namespace lab.FCMApps.Droid
             //Handle notification when app is closed here
             CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
             {
-                Console.WriteLine("MainApplication - OnNotificationReceived");
+                try
+                {
+                    Console.WriteLine("MainApplication - OnNotificationReceived");
+                    var fcmNotificationViewModel = GetFirebasePushNotificationData(p);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"MainApplication - OnNotificationReceived: Exception - {ex.Message.ToString()}");
+                }
             };
 
             CrossFirebasePushNotification.Current.OnNotificationAction += (s, p) =>
             {
-                Console.WriteLine("MainApplication - OnNotificationAction");
+                try
+                {
+                    Console.WriteLine("MainApplication - OnNotificationAction");
+                    var fcmNotificationViewModel = GetFirebasePushNotificationResponse(p);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"MainApplication - OnNotificationAction: Exception - {ex.Message.ToString()}");
+                }
+                
             };
 
             CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
             {
-                string googleMessageId = string.Empty;
+                try
+                {
+                    Console.WriteLine("MainApplication - OnNotificationOpened");
+                    var fcmNotificationViewModel = GetFirebasePushNotificationResponse(p);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"MainApplication - OnNotificationOpened: Exception - {ex.Message.ToString()}");
+                }
+            };
+        }
 
-                //Console.WriteLine(p.Identifier);
+        private FcmNotificationViewModel GetFirebasePushNotificationResponse(FirebasePushNotificationResponseEventArgs p)
+        {
+            try
+            {
+                FcmNotificationViewModel fcmNotificationViewModel = new FcmNotificationViewModel();
 
-                Console.WriteLine("MainApplication - OnNotificationOpened");
                 foreach (var data in p.Data)
                 {
-                    Console.WriteLine($"MainApplication - OnNotificationOpened: {data.Key} : {data.Value}");
-                    if (data.Key.Contains("google.message_id"))
+                    //Console.WriteLine($"GetFirebasePushNotificationResponse: {data.Key} : {data.Value}");
+                    if (data.Key == "title")
                     {
-                        googleMessageId = data.Value.ToString();
-                        Console.WriteLine($"MainApplication - OnNotificationOpened: google.message_id {googleMessageId}");
-                        Xamarin.Forms.Application.Current.MainPage = new NotificationPage(googleMessageId);
+                        fcmNotificationViewModel.Title = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: title - {fcmNotificationViewModel.Title}");
+                    }
+                    else if (data.Key == "subtitle")
+                    {
+                        fcmNotificationViewModel.SubTitle = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: sub_title - {fcmNotificationViewModel.SubTitle}");
+                    }
+                    else if (data.Key == "body")
+                    {
+                        fcmNotificationViewModel.Body = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: body - {fcmNotificationViewModel.Body}");
+                    }
+                    else if (data.Key == "priority")
+                    {
+                        fcmNotificationViewModel.Priority = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: priority - {fcmNotificationViewModel.Priority}");
+                    }
+                    else if (data.Key == "icon")
+                    {
+                        fcmNotificationViewModel.Icon = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: icon - {fcmNotificationViewModel.Icon}");
+                    }
+                    else if (data.Key == "sound")
+                    {
+                        fcmNotificationViewModel.Sound = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: sound - {fcmNotificationViewModel.Sound}");
+                    }
+                    else if (data.Key == "chat_data_available")
+                    {
+                        fcmNotificationViewModel.ChatDataAvailable = Convert.ToBoolean(data.Value);
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: chat_data_available - {fcmNotificationViewModel.ChatDataAvailable}");
+                    }
+                    else if (data.Key == "chat_data")
+                    {
+                        fcmNotificationViewModel.ChatData = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationResponse: chat_data - {fcmNotificationViewModel.ChatData}");
                     }
                 }
 
-                if (!string.IsNullOrEmpty(p.Identifier))
+                return fcmNotificationViewModel;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private FcmNotificationViewModel GetFirebasePushNotificationData(FirebasePushNotificationDataEventArgs p)
+        {
+            try
+            {
+                FcmNotificationViewModel fcmNotificationViewModel = new FcmNotificationViewModel();
+
+                foreach (var data in p.Data)
                 {
-                    //Device.BeginInvokeOnMainThread(() =>
-                    //{
-                    //    App.OpenNotification(pp.Identifier);
-                    //    //textLabel.Text = p.Identifier;
-                    //});
+                    //Console.WriteLine($"GetFirebasePushNotificationData: {data.Key} : {data.Value}");
+                    if (data.Key == "title")
+                    {
+                        fcmNotificationViewModel.Title = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: title - {fcmNotificationViewModel.Title}");
+                    }
+                    else if (data.Key == "subtitle")
+                    {
+                        fcmNotificationViewModel.SubTitle = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: sub_title - {fcmNotificationViewModel.SubTitle}");
+                    }
+                    else if (data.Key == "body")
+                    {
+                        fcmNotificationViewModel.Body = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: body - {fcmNotificationViewModel.Body}");
+                    }
+                    else if (data.Key == "priority")
+                    {
+                        fcmNotificationViewModel.Priority = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: priority - {fcmNotificationViewModel.Priority}");
+                    }
+                    else if (data.Key == "icon")
+                    {
+                        fcmNotificationViewModel.Icon = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: icon - {fcmNotificationViewModel.Icon}");
+                    }
+                    else if (data.Key == "sound")
+                    {
+                        fcmNotificationViewModel.Sound = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: sound - {fcmNotificationViewModel.Sound}");
+                    }
+                    else if (data.Key == "chat_data_available")
+                    {
+                        fcmNotificationViewModel.ChatDataAvailable = Convert.ToBoolean(data.Value);
+                        Console.WriteLine($"GetFirebasePushNotificationData: chat_data_available - {fcmNotificationViewModel.ChatDataAvailable}");
+                    }
+                    else if (data.Key == "chat_data")
+                    {
+                        fcmNotificationViewModel.ChatData = data.Value.ToString();
+                        Console.WriteLine($"GetFirebasePushNotificationData: chat_data - {fcmNotificationViewModel.ChatData}");
+                    }
                 }
-                else if (p.Data.ContainsKey("aps.alert.title"))
-                {
-                    //Device.BeginInvokeOnMainThread(() =>
-                    //{
-                    //    //textLabel.Text = p.Data["aps.alert.title"];
-                    //});
-                }
-            };
+
+                return fcmNotificationViewModel;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
     }
 }
