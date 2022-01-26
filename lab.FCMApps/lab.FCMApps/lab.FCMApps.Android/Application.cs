@@ -48,6 +48,8 @@ namespace lab.FCMApps.Droid
                 {
                     Console.WriteLine("MainApplication - OnNotificationReceived");
                     var fcmNotificationViewModel = GetFirebasePushNotificationData(p);
+                    //Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new NotificationPage(fcmNotificationViewModel));
+                    Xamarin.Forms.Application.Current.MainPage = new NotificationPage(fcmNotificationViewModel);
                 }
                 catch (Exception ex)
                 {
@@ -75,6 +77,8 @@ namespace lab.FCMApps.Droid
                 {
                     Console.WriteLine("MainApplication - OnNotificationOpened");
                     var fcmNotificationViewModel = GetFirebasePushNotificationResponse(p);
+                    //Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new NotificationPage(fcmNotificationViewModel));
+                    Xamarin.Forms.Application.Current.MainPage = new NotificationPage(fcmNotificationViewModel);
                 }
                 catch (Exception ex)
                 {

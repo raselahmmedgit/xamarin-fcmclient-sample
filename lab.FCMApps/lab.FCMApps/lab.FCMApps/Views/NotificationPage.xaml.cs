@@ -24,6 +24,15 @@ namespace lab.FCMApps.Views
             BindingContext = _viewModel = new NotificationViewModel();
         }
 
+        public NotificationPage(FcmNotificationViewModel fcmNotificationViewModel)
+        {
+            InitializeComponent();
+
+            DisplayAlert(fcmNotificationViewModel.Title, fcmNotificationViewModel.SubTitle, "OK");
+
+            BindingContext = _viewModel = new NotificationViewModel();
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
