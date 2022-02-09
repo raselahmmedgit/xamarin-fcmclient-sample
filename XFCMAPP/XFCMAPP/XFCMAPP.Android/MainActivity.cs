@@ -14,15 +14,15 @@ namespace XFCMAPP.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            //FirebasePushNotificationManager.ProcessIntent(this, Intent);
+
+            SetupFirebasePushNotification();
+
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-
-            //FirebasePushNotificationManager.ProcessIntent(this, Intent);
-
-            SetupFirebasePushNotification();
         }
 
         protected override void OnNewIntent(Intent intent)
@@ -54,13 +54,14 @@ namespace XFCMAPP.Droid
                 FirebasePushNotificationManager.DefaultNotificationChannelImportance = NotificationImportance.Max;
             }
 
-            //If debug you should reset the token each time.
-#if DEBUG
-            FirebasePushNotificationManager.Initialize(this, true);
-#else
-            FirebasePushNotificationManager.Initialize(this, false);
-#endif
+            ////If debug you should reset the token each time.
+            //#if DEBUG
+            // FirebasePushNotificationManager.Initialize(this, true);
+            //#else
+            // FirebasePushNotificationManager.Initialize(this, false);
+            //#endif
 
+            FirebasePushNotificationManager.Initialize(this, false);
 
             //CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             //{

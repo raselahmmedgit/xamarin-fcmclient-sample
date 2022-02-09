@@ -9,16 +9,14 @@
         </Frame>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        
+        <Button FontSize="16" Padding="10" Margin="20,5,20,5"  Text="Init Fcm And RapidPro" Clicked="BtnInit_Clicked" />
+        <Button FontSize="16" Padding="10" Margin="20,5,20,5"  Text="Send Init RapidPro" Clicked="BtnRapidProInit_Clicked" />
+        <Button FontSize="16" Padding="10" Margin="20,5,20,5"  Text="Send QuickReplies RapidPro" Clicked="BtnRapidProQuickReplies_Clicked" />
+        <Button FontSize="16" Padding="10" Margin="20,5,20,5"  Text="Send End RapidPro" Clicked="BtnRapidProEnd_Clicked" />
+
+        <Label x:Name="LblMessage" Text="" FontSize="16" Padding="20,10,20,10"/>
+
     </StackLayout>
 
 </ContentPage>

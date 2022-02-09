@@ -1,8 +1,7 @@
 ﻿using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using XFCMAPP.Services;
+using XFCMAPP.Service;
 using XFCMAPP.Utility;
 
 namespace XFCMAPP
@@ -13,11 +12,12 @@ namespace XFCMAPP
         {
             InitializeComponent();
 
+            //InitializeRapidPro();
+            //InitializeFcmPushNotification();
+
+            InitializeFcmAndRapidPro();
+
             MainPage = new MainPage();
-
-            InitializeFcmPushNotification();
-            InitializeRapidPro();
-
         }
 
         private void InitializeFcmPushNotification()
@@ -28,17 +28,51 @@ namespace XFCMAPP
 
         private void InitializeRapidPro()
         {
-            RapidProService rapidProService = new RapidProService();
-            string rapidProUrn = RapidProHelper.GetUrnFromGuid();
-            rapidProService.RapidProUrn = rapidProUrn;
+            RapidProContainer rapidProContainer = new RapidProContainer();
+            if (string.IsNullOrEmpty(rapidProContainer.RapidProUrn))
+            {
+                string rapidProUrn = RapidProHelper.GetUrnFromGuid();
+                rapidProContainer.RapidProUrn = rapidProUrn;
+
+                Console.WriteLine($"App - InitializeRapidPro: Urn - {rapidProUrn}");
+            }
         }
 
         private void Current_OnTokenRefresh(object source, FirebasePushNotificationTokenEventArgs e)
         {
-            RapidProService rapidProService = new RapidProService();
-            string fcmPushNotificationToken = e.Token;
-            rapidProService.RapidProFcmToken = fcmPushNotificationToken;
-            Console.WriteLine($"App - Current_OnTokenRefresh: {fcmPushNotificationToken}");
+            RapidProContainer rapidProContainer = new RapidProContainer();
+
+            if (string.IsNullOrEmpty(rapidProContainer.RapidProFcmToken))
+            {
+                string fcmPushNotificationToken = e.Token;
+                rapidProContainer.RapidProFcmToken = fcmPushNotificationToken;
+
+                Console.WriteLine($"App - Current_OnTokenRefresh: {fcmPushNotificationToken}");
+            }
+        }
+
+        private void InitializeFcmAndRapidPro()
+        {
+            CrossFirebasePushNotification.Current.Subscribe("all");
+
+            RapidProContainer rapidProContainer = new RapidProContainer();
+
+            if (string.IsNullOrEmpty(rapidProContainer.RapidProFcmToken))
+            {
+                string fcmPushNotificationToken = CrossFirebasePushNotification.Current?.Token;
+                rapidProContainer.RapidProFcmToken = fcmPushNotificationToken;
+
+                Console.WriteLine($"App - InitializeFcmAndRapidPro: Token - {fcmPushNotificationToken}");
+            }
+
+            if (string.IsNullOrEmpty(rapidProContainer.RapidProUrn))
+            {
+                string rapidProUrn = RapidProHelper.GetUrnFromGuid();
+                rapidProContainer.RapidProUrn = rapidProUrn;
+
+                Console.WriteLine($"App - InitializeFcmAndRapidPro: Urn - {rapidProUrn}");
+            }
+
         }
 
         protected override void OnStart()

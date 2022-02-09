@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XFCMAPP.Utility
 {
-    public static class AppConstant
+    public static class RapidProConstant
     {
         public static string RapidProFcmUrl = "https://rapidpro.ilhasoft.mobi/c/fcm/";
 
