@@ -12,7 +12,6 @@ namespace XFCMAPP.Service
         private const string RapidProFromKey = "RapidProFrom";
         private const string RapidProStartMsgKey = "RapidProStartMsg";
         private const string RapidProLastMsgKey = "RapidProLastMsg";
-        private const string RapidProRegisterDoneKey = "RapidProRegisterDone";
 
         #endregion
 
@@ -97,22 +96,6 @@ namespace XFCMAPP.Service
                 if (Application.Current.Properties != null)
                 {
                     Application.Current.Properties[RapidProLastMsgKey] = value;
-                    Application.Current.SavePropertiesAsync();
-                }
-            }
-        }
-
-        public bool RapidProRegisterDone
-        {
-            get
-            {
-                return Application.Current.Properties.ContainsKey(RapidProRegisterDoneKey) ? Convert.ToBoolean(Application.Current.Properties[RapidProRegisterDoneKey].ToString()) : false;
-            }
-            set
-            {
-                if (Application.Current.Properties != null)
-                {
-                    Application.Current.Properties[RapidProRegisterDoneKey] = value;
                     Application.Current.SavePropertiesAsync();
                 }
             }
