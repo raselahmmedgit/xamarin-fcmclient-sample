@@ -20,6 +20,7 @@ namespace XFCMAPP.Chat.PartialViews
         {
             (this.Parent.Parent.BindingContext as ChatPageViewModel).OnSendCommand.Execute(null);
             chatTextInput.Focus();
+            chatTextInput.Text = string.Empty;
         }
 
         public void UnFocusEntry()

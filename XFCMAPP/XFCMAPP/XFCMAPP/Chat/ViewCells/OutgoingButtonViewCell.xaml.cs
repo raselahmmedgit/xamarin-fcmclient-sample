@@ -11,5 +11,26 @@ namespace XFCMAPP.Chat.ViewCells
         {
             InitializeComponent();
         }
+
+        private void OnActionSendCommand(object sender, EventArgs e)
+        {
+            try
+            {
+                Console.WriteLine("OutgoingButtonViewCell - OnActionSendCommand");
+
+                var chatPageViewModel = (this.Parent.Parent.BindingContext as ChatPageViewModel);
+
+                Button btnActionSendCommand = (Button)sender;
+                if (btnActionSendCommand != null)
+                {
+                    chatPageViewModel.ActionInputText = btnActionSendCommand.Text.Trim().ToString();
+                }
+                chatPageViewModel.OnActionSendCommand.Execute(null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"OutgoingButtonViewCell - OnActionSendCommand: Exception - {ex.Message.ToString()}");
+            }
+        }
     }
 }

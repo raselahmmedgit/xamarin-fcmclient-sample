@@ -218,7 +218,6 @@ namespace XFCMAPP.Chat
                                 foreach (var quickReplie in quickReplies)
                                 {
                                     _chatPageViewModel.Messages.Insert(0, new Message() { Text = quickReplie, Value = quickReplie, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = true });
-                                    _chatPageViewModel.ActionInputText = quickReplie;
                                 }
                             }
                         }

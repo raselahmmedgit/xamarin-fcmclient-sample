@@ -183,7 +183,7 @@ namespace XFCMAPP.Chat.ViewModels
                         {
                             var rapidProReceive = _rapidProService.RapidProReceive(rapidProUrn, rapidProFcmToken, RapidProInitPhrase);
                             RapidProInit = true;
-                            RapidProRegisterAndReceiveInitMsg(RapidProInitMsgPhrase);
+                            //RapidProRegisterAndReceiveInitMsg(RapidProInitMsgPhrase);
                         }
                     }
                 }
@@ -228,7 +228,8 @@ namespace XFCMAPP.Chat.ViewModels
 
                 if (!string.IsNullOrEmpty(rapidProUrn) && !string.IsNullOrEmpty(rapidProFcmToken))
                 {
-                    if (RapidProInit && RapidProInitMsg)
+                    //if (RapidProInit && RapidProInitMsg)
+                    if (RapidProInit)
                     {
                         Messages.Insert(0, new Message() { Text = inputText, User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
 
