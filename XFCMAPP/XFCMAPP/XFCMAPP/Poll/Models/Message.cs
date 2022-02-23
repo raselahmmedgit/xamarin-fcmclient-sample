@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace XFCMAPP.Chat.Models
+namespace XFCMAPP.Poll.Models
 {
     public class Message
     {
         public string Text { get; set; }
-        public string Value { get; set; }
         public string User { get; set; }
-        public bool MessageAction { get; set; }
         public ICollection<MessageAction> MessageActions { get; set; }
     }
 

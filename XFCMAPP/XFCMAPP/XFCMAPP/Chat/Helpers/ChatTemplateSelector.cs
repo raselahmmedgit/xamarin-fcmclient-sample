@@ -11,11 +11,13 @@ namespace XFCMAPP.Chat.Helpers
     {
         DataTemplate incomingDataTemplate;
         DataTemplate outgoingDataTemplate;
+        DataTemplate outgoingButtonTemplate;
 
         public ChatTemplateSelector()
         {
             this.incomingDataTemplate = new DataTemplate(typeof(IncomingViewCell));
             this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingViewCell));
+            this.outgoingButtonTemplate = new DataTemplate(typeof(OutgoingButtonViewCell));
         }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
@@ -28,7 +30,14 @@ namespace XFCMAPP.Chat.Helpers
 
             if (messageVm.User == MessageUserEnum.UserHealthBuddy.ToDescriptionAttr())
             {
-                return outgoingDataTemplate;
+                if (messageVm.MessageAction == true)
+                {
+                    return outgoingButtonTemplate;
+                }
+                else
+                {
+                    return outgoingDataTemplate;
+                }
             }
             else if (messageVm.User == MessageUserEnum.UserLogin.ToDescriptionAttr())
             {
@@ -40,7 +49,14 @@ namespace XFCMAPP.Chat.Helpers
             }
             else
             {
-                return outgoingDataTemplate;
+                if (messageVm.MessageAction == true)
+                {
+                    return outgoingButtonTemplate;
+                }
+                else
+                {
+                    return outgoingDataTemplate;
+                }
             }
         }
 

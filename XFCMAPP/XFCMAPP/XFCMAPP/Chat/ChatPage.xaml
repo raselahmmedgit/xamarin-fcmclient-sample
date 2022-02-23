@@ -4,7 +4,7 @@
              x:Class="XFCMAPP.Chat.ChatPage" 
              xmlns:local="clr-namespace:XFCMAPP.Chat.Helpers" 
              xmlns:partials="clr-namespace:XFCMAPP.Chat.PartialViews" 
-             xmlns:controls="clr-namespace:XFCMAPP.Chat.Controls">
+             xmlns:controls="clr-namespace:XFCMAPP.Chat.Controls" Title="Chat Page">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:ChatTemplateSelector x:Key="MessageTemplateSelector"/>

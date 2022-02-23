@@ -5,14 +5,14 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using XFCMAPP.Chat.Helpers;
-using XFCMAPP.Chat.Models;
+using XFCMAPP.Poll.Helpers;
+using XFCMAPP.Poll.Models;
 using XFCMAPP.Service;
 using XFCMAPP.Utility;
 
-namespace XFCMAPP.Chat.ViewModels
+namespace XFCMAPP.Poll.ViewModels
 {
-    public class ChatPageViewModel : INotifyPropertyChanged
+    public class PollPageViewModel : INotifyPropertyChanged
     {
         private readonly RapidProContainer _rapidProContainer;
         private readonly RapidProService _rapidProService;
@@ -24,8 +24,8 @@ namespace XFCMAPP.Chat.ViewModels
         public bool RapidProInitMsg { get; set; } = false;
         public bool RapidProInitSend { get; set; } = false;
 
-        public bool ShowScrollTap { get; set; } = false;
-        public bool LastMessageVisible { get; set; } = true;
+        //public bool ShowScrollTap { get; set; } = false;
+        //public bool LastMessageVisible { get; set; } = true;
         //public int PendingMessageCount { get; set; } = 0;
         //public bool PendingMessageCountVisible { get { return PendingMessageCount > 0; } }
 
@@ -34,12 +34,10 @@ namespace XFCMAPP.Chat.ViewModels
         public ObservableCollection<Message> Messages { get; set; } = new ObservableCollection<Message>();
         public string InputText { get; set; }
         public ICommand OnSendCommand { get; set; }
-        public string ActionInputText { get; set; }
-        public ICommand OnActionSendCommand { get; set; }
-        public ICommand MessageAppearingCommand { get; set; }
-        public ICommand MessageDisappearingCommand { get; set; }
+        //public ICommand MessageAppearingCommand { get; set; }
+        //public ICommand MessageDisappearingCommand { get; set; }
 
-        public ChatPageViewModel()
+        public PollPageViewModel()
         {
             _rapidProContainer = new RapidProContainer();
             _rapidProService = new RapidProService();
@@ -68,8 +66,8 @@ namespace XFCMAPP.Chat.ViewModels
             //Messages.Insert(0, new Message() { Text = " No Problem" });
             //Messages.Insert(0, new Message() { Text = "Hugs and Kisses" });
 
-            MessageAppearingCommand = new Command<Message>(OnMessageAppearing);
-            MessageDisappearingCommand = new Command<Message>(OnMessageDisappearing);
+            //MessageAppearingCommand = new Command<Message>(OnMessageAppearing);
+            //MessageDisappearingCommand = new Command<Message>(OnMessageDisappearing);
 
             OnSendCommand = new Command(() =>
             {
@@ -78,17 +76,6 @@ namespace XFCMAPP.Chat.ViewModels
                     //Messages.Insert(0, new Message() { Text = InputText, User = "RAB" });
                     SendCommand(InputText);
                     InputText = string.Empty;
-                }
-
-            });
-
-            OnActionSendCommand = new Command(() =>
-            {
-                if (!string.IsNullOrEmpty(ActionInputText))
-                {
-                    //Messages.Insert(0, new Message() { Text = InputText, User = "RAB" });
-                    SendCommand(ActionInputText);
-                    ActionInputText = string.Empty;
                 }
 
             });
@@ -110,42 +97,42 @@ namespace XFCMAPP.Chat.ViewModels
 
         }
 
-        void OnMessageAppearing(Message message)
-        {
-            var idx = Messages.IndexOf(message);
-            if (idx <= 6)
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    //while (DelayedMessages.Count > 0)
-                    //{
-                    //    Messages.Insert(0, DelayedMessages.Dequeue());
-                    //}
-                    ShowScrollTap = false;
-                    LastMessageVisible = true;
-                    //PendingMessageCount = 0;
-                });
-            }
-        }
+        //void OnMessageAppearing(Message message)
+        //{
+        //    var idx = Messages.IndexOf(message);
+        //    if (idx <= 6)
+        //    {
+        //        Device.BeginInvokeOnMainThread(() =>
+        //        {
+        //            //while (DelayedMessages.Count > 0)
+        //            //{
+        //            //    Messages.Insert(0, DelayedMessages.Dequeue());
+        //            //}
+        //            //ShowScrollTap = false;
+        //            //LastMessageVisible = true;
+        //            //PendingMessageCount = 0;
+        //        });
+        //    }
+        //}
 
-        void OnMessageDisappearing(Message message)
-        {
-            var idx = Messages.IndexOf(message);
-            if (idx >= 6)
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    ShowScrollTap = true;
-                    LastMessageVisible = false;
-                });
+        //void OnMessageDisappearing(Message message)
+        //{
+        //    var idx = Messages.IndexOf(message);
+        //    if (idx >= 6)
+        //    {
+        //        Device.BeginInvokeOnMainThread(() =>
+        //        {
+        //            //ShowScrollTap = true;
+        //            //LastMessageVisible = false;
+        //        });
 
-            }
-        }
+        //    }
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         #region Fcm And RapidPro
-        
+
         private async void InitializeFcmAndRapidPro()
         {
             if (string.IsNullOrEmpty(_rapidProContainer.RapidProFcmToken))
@@ -153,7 +140,7 @@ namespace XFCMAPP.Chat.ViewModels
                 string fcmPushNotificationToken = CrossFirebasePushNotification.Current?.Token;
                 _rapidProContainer.RapidProFcmToken = fcmPushNotificationToken;
 
-                Console.WriteLine($"ChatPageViewModel - InitializeFcmAndRapidPro: Token - {fcmPushNotificationToken}");
+                Console.WriteLine($"PollPageViewModel - InitializeFcmAndRapidPro: Token - {fcmPushNotificationToken}");
             }
 
             if (string.IsNullOrEmpty(_rapidProContainer.RapidProUrn))
@@ -161,7 +148,7 @@ namespace XFCMAPP.Chat.ViewModels
                 string rapidProUrn = RapidProHelper.GetUrnFromGuid();
                 _rapidProContainer.RapidProUrn = rapidProUrn;
 
-                Console.WriteLine($"ChatPageViewModel - InitializeFcmAndRapidPro: Urn - {rapidProUrn}");
+                Console.WriteLine($"PollPageViewModel - InitializeFcmAndRapidPro: Urn - {rapidProUrn}");
             }
 
             await RapidProRegisterAndReceiveInit();
@@ -191,7 +178,7 @@ namespace XFCMAPP.Chat.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ChatPageViewModel - RapidProRegisterAndReceiveInit: Exception - {ex.Message.ToString()}");
+                Console.WriteLine($"PollPageViewModel - RapidProRegisterAndReceiveInit: Exception - {ex.Message.ToString()}");
             }
         }
 
@@ -215,7 +202,7 @@ namespace XFCMAPP.Chat.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ChatPageViewModel - RapidProRegisterAndReceiveInitMsg: Exception - {ex.Message.ToString()}");
+                Console.WriteLine($"PollPageViewModel - RapidProRegisterAndReceiveInitMsg: Exception - {ex.Message.ToString()}");
             }
         }
 
@@ -240,7 +227,7 @@ namespace XFCMAPP.Chat.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ChatPageViewModel - SendCommand: Exception - {ex.Message.ToString()}");
+                Console.WriteLine($"ChatViewModel - SendCommand: Exception - {ex.Message.ToString()}");
             }
         }
 

@@ -68,10 +68,10 @@ namespace XFCMAPP.ViewModel
     [Serializable]
     public class RapidProFcmPushNotificationQuickReplie
     {
-        [JsonProperty(PropertyName = "message_id")]
+        [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
 
-        [JsonProperty(PropertyName = "message")]
+        [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
     }
 }

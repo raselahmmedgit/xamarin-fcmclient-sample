@@ -1,14 +1,14 @@
-﻿
+﻿using Newtonsoft.Json;
 using Plugin.FirebasePushNotification;
 using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XFCMAPP.Chat.Helpers;
 using XFCMAPP.Chat.Models;
 using XFCMAPP.Chat.ViewModels;
-using XFCMAPP.Service;
 using XFCMAPP.Utility;
+using XFCMAPP.ViewModel;
 
 namespace XFCMAPP.Chat
 {
@@ -78,7 +78,7 @@ namespace XFCMAPP.Chat
 
                 if (e.Data != null)
                 {
-                    string msg = $"title: {e.Data["title"]}, message: {e.Data["message"]}";
+                    var rapidProFcmPushNotification = new RapidProFcmPushNotification();
 
                     foreach (var item in e.Data)
                     {
@@ -124,7 +124,7 @@ namespace XFCMAPP.Chat
 
                 if (e.Data != null)
                 {
-                    string msg = $"title: {e.Data["title"]}, message: {e.Data["message"]}";
+                    var rapidProFcmPushNotification = new RapidProFcmPushNotification();
 
                     foreach (var item in e.Data)
                     {
@@ -170,35 +170,57 @@ namespace XFCMAPP.Chat
 
                 if (e.Data != null)
                 {
-                    string msg = $"title: {e.Data["title"]}, message: {e.Data["message"]}";
-
-                    _chatPageViewModel.Messages.Insert(0, new Message() { Text = msg, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr() });
+                    var rapidProFcmPushNotification = new RapidProFcmPushNotification();
 
                     foreach (var item in e.Data)
                     {
                         if (item.Key.Contains("title"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - title - {item.Value}");
+                            rapidProFcmPushNotification.Title = item.Value.ToString();
                         }
                         else if (item.Key.Contains("body"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - body - {item.Value}");
+                            rapidProFcmPushNotification.Body = item.Value.ToString();
                         }
                         else if (item.Key.Contains("type"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - type - {item.Value}");
+                            rapidProFcmPushNotification.Type = item.Value.ToString();
                         }
                         else if (item.Key.Contains("message_id"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - message_id - {item.Value}");
+                            rapidProFcmPushNotification.MessageId = item.Value.ToString();
                         }
                         else if (item.Key.Contains("message"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - message - {item.Value}");
+                            rapidProFcmPushNotification.Message = item.Value.ToString();
                         }
                         else if (item.Key.Contains("quick_replies"))
                         {
                             Console.WriteLine($"ChatPage - OnNotificationReceived: Data - quick_replies - {item.Value}");
+                            rapidProFcmPushNotification.QuickReplies = item.Value.ToString();
+                        }
+                    }
+
+                    if (rapidProFcmPushNotification != null)
+                    {
+                        _chatPageViewModel.Messages.Insert(0, new Message() { Text = rapidProFcmPushNotification.Body, Value = rapidProFcmPushNotification.Body, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = false });
+
+                        if (rapidProFcmPushNotification.QuickReplies != null)
+                        {
+                            var quickReplies = JsonConvert.DeserializeObject<List<string>>(rapidProFcmPushNotification.QuickReplies);
+                            if (quickReplies != null)
+                            {
+                                foreach (var quickReplie in quickReplies)
+                                {
+                                    _chatPageViewModel.Messages.Insert(0, new Message() { Text = quickReplie, Value = quickReplie, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = true });
+                                    _chatPageViewModel.ActionInputText = quickReplie;
+                                }
+                            }
                         }
                     }
                 }

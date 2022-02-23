@@ -90,6 +90,18 @@ namespace XFCMAPP
             }
         }
 
+        private void BtnGoPollPage_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new Poll.PollPage();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"MainPage - BtnGoPollPage_Clicked: Exception - {ex.Message.ToString()}");
+            }
+        }
+
         private void BtnInit_Clicked(object sender, EventArgs e)
         {
             try
