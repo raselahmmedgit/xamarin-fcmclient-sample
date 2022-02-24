@@ -40,18 +40,6 @@
                                  Padding="1"
                                  BackgroundColor="White"   
                                  IsVisible="{Binding ShowScrollTap,Mode=TwoWay}">
-            <StackLayout Spacing="3">
-                <Label Text="{Binding PendingMessageCount}"
-                              HorizontalOptions="CenterAndExpand"
-                              IsVisible="{Binding PendingMessageCountVisible}"
-                              VerticalTextAlignment="Center"
-                              TextColor="{DynamicResource primary}"/>
-                <Image Source="ic_scrolldown"
-                               WidthRequest="30"
-                               HeightRequest="30"
-                               VerticalOptions="CenterAndExpand"/>
-
-            </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ScrollTap"/>
             </Frame.GestureRecognizers>

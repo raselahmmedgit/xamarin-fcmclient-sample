@@ -48,13 +48,8 @@ namespace XFCMAPP.Chat
 
                     Device.BeginInvokeOnMainThread(() =>
                     {
-                        //while (vm.DelayedMessages.Count > 0)
-                        //{
-                        //    vm.Messages.Insert(0, vm.DelayedMessages.Dequeue());
-                        //}
                         vm.ShowScrollTap = false;
                         vm.LastMessageVisible = true;
-                        //vm.PendingMessageCount = 0;
                         ChatList?.ScrollToFirst();
                     });
 
@@ -208,19 +203,7 @@ namespace XFCMAPP.Chat
 
                     if (rapidProFcmPushNotification != null)
                     {
-                        _chatPageViewModel.Messages.Insert(0, new Message() { Text = rapidProFcmPushNotification.Body, Value = rapidProFcmPushNotification.Body, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = false });
-
-                        if (rapidProFcmPushNotification.QuickReplies != null)
-                        {
-                            var quickReplies = JsonConvert.DeserializeObject<List<string>>(rapidProFcmPushNotification.QuickReplies);
-                            if (quickReplies != null)
-                            {
-                                foreach (var quickReplie in quickReplies)
-                                {
-                                    _chatPageViewModel.Messages.Insert(0, new Message() { Text = quickReplie, Value = quickReplie, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = true });
-                                }
-                            }
-                        }
+                        _chatPageViewModel.InsertMessages(rapidProFcmPushNotification);
                     }
                 }
 
@@ -230,6 +213,6 @@ namespace XFCMAPP.Chat
                 Console.WriteLine($"ChatPage - OnNotificationReceived: Exception - {ex.Message.ToString()}");
             }
         }
-
+        
     }
 }

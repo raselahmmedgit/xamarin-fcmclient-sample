@@ -1,5 +1,7 @@
-﻿using Plugin.FirebasePushNotification;
+﻿using Newtonsoft.Json;
+using Plugin.FirebasePushNotification;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -9,6 +11,7 @@ using XFCMAPP.Chat.Helpers;
 using XFCMAPP.Chat.Models;
 using XFCMAPP.Service;
 using XFCMAPP.Utility;
+using XFCMAPP.ViewModel;
 
 namespace XFCMAPP.Chat.ViewModels
 {
@@ -26,10 +29,6 @@ namespace XFCMAPP.Chat.ViewModels
 
         public bool ShowScrollTap { get; set; } = false;
         public bool LastMessageVisible { get; set; } = true;
-        //public int PendingMessageCount { get; set; } = 0;
-        //public bool PendingMessageCountVisible { get { return PendingMessageCount > 0; } }
-
-        //public Queue<Message> DelayedMessages { get; set; } = new Queue<Message>();
 
         public ObservableCollection<Message> Messages { get; set; } = new ObservableCollection<Message>();
         public string InputText { get; set; }
@@ -46,27 +45,27 @@ namespace XFCMAPP.Chat.ViewModels
 
             InitializeFcmAndRapidPro();
 
-            //Messages.Insert(0, new Message() { Text = "Hi" });
-            //Messages.Insert(0, new Message() { Text = "How are you?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "What's new?" });
-            //Messages.Insert(0, new Message() { Text = "How is your family", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your dog?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your cat?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your sister?" });
-            //Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
-            //Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
-            //Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
-            //Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
-            //Messages.Insert(0, new Message() { Text = "Oh My God!" });
-            //Messages.Insert(0, new Message() { Text = " No Problem", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "Hugs and Kisses", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
-            //Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
-            //Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
-            //Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
-            //Messages.Insert(0, new Message() { Text = "Oh My God!" });
-            //Messages.Insert(0, new Message() { Text = " No Problem" });
-            //Messages.Insert(0, new Message() { Text = "Hugs and Kisses" });
+            Messages.Insert(0, new Message() { Text = "Hi" });
+            Messages.Insert(0, new Message() { Text = "How are you?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "What's new?" });
+            Messages.Insert(0, new Message() { Text = "How is your family", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your dog?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your cat?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your sister?" });
+            Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
+            Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
+            Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
+            Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
+            Messages.Insert(0, new Message() { Text = "Oh My God!" });
+            Messages.Insert(0, new Message() { Text = " No Problem", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "Hugs and Kisses", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
+            Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
+            Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
+            Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
+            Messages.Insert(0, new Message() { Text = "Oh My God!" });
+            Messages.Insert(0, new Message() { Text = " No Problem" });
+            Messages.Insert(0, new Message() { Text = "Hugs and Kisses" });
 
             MessageAppearingCommand = new Command<Message>(OnMessageAppearing);
             MessageDisappearingCommand = new Command<Message>(OnMessageDisappearing);
@@ -75,7 +74,7 @@ namespace XFCMAPP.Chat.ViewModels
             {
                 if (!string.IsNullOrEmpty(InputText))
                 {
-                    //Messages.Insert(0, new Message() { Text = InputText, User = "RAB" });
+                    //Messages.Insert(0, new Message() { Text = InputText, User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
                     SendCommand(InputText);
                     InputText = string.Empty;
                 }
@@ -86,7 +85,7 @@ namespace XFCMAPP.Chat.ViewModels
             {
                 if (!string.IsNullOrEmpty(ActionInputText))
                 {
-                    //Messages.Insert(0, new Message() { Text = InputText, User = "RAB" });
+                    //Messages.Insert(0, new Message() { Text = InputText, User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
                     SendCommand(ActionInputText);
                     ActionInputText = string.Empty;
                 }
@@ -98,11 +97,11 @@ namespace XFCMAPP.Chat.ViewModels
             //{
             //    if (LastMessageVisible)
             //    {
-            //        Messages.Insert(0, new Message() { Text = "New message test by rab", User = "RAB" });
+            //        Messages.Insert(0, new Message() { Text = "New message test by rab", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
             //    }
             //    else
             //    {
-            //        DelayedMessages.Enqueue(new Message() { Text = "New message test by rab", User = "RAB" });
+            //        DelayedMessages.Enqueue(new Message() { Text = "New message test by rab", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
             //        PendingMessageCount++;
             //    }
             //    return true;
@@ -143,9 +142,25 @@ namespace XFCMAPP.Chat.ViewModels
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public void InsertMessages(RapidProFcmPushNotification rapidProFcmPushNotification)
+        {
+            Messages.Insert(0, new Message() { Text = rapidProFcmPushNotification.Body, Value = rapidProFcmPushNotification.Body, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = false });
 
-        #region Fcm And RapidPro
-        
+            if (rapidProFcmPushNotification.QuickReplies != null)
+            {
+                var quickReplies = JsonConvert.DeserializeObject<List<string>>(rapidProFcmPushNotification.QuickReplies);
+                if (quickReplies != null)
+                {
+                    foreach (var quickReplie in quickReplies)
+                    {
+                        Messages.Insert(0, new Message() { Text = quickReplie, Value = quickReplie, User = MessageUserEnum.UserHealthBuddy.ToDescriptionAttr(), MessageAction = true });
+                    }
+                }
+            }
+        }
+
+        #region RapidPro Fcm Push Notification
+
         private async void InitializeFcmAndRapidPro()
         {
             if (string.IsNullOrEmpty(_rapidProContainer.RapidProFcmToken))
@@ -244,7 +259,6 @@ namespace XFCMAPP.Chat.ViewModels
                 Console.WriteLine($"ChatPageViewModel - SendCommand: Exception - {ex.Message.ToString()}");
             }
         }
-
 
         #endregion
     }

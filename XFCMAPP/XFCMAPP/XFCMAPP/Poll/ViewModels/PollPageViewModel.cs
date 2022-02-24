@@ -44,27 +44,27 @@ namespace XFCMAPP.Poll.ViewModels
 
             InitializeFcmAndRapidPro();
 
-            //Messages.Insert(0, new Message() { Text = "Hi" });
-            //Messages.Insert(0, new Message() { Text = "How are you?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "What's new?" });
-            //Messages.Insert(0, new Message() { Text = "How is your family", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your dog?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your cat?", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "How is your sister?" });
-            //Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
-            //Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
-            //Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
-            //Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
-            //Messages.Insert(0, new Message() { Text = "Oh My God!" });
-            //Messages.Insert(0, new Message() { Text = " No Problem", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "Hugs and Kisses", User = "RAB" });
-            //Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
-            //Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
-            //Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
-            //Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
-            //Messages.Insert(0, new Message() { Text = "Oh My God!" });
-            //Messages.Insert(0, new Message() { Text = " No Problem" });
-            //Messages.Insert(0, new Message() { Text = "Hugs and Kisses" });
+            Messages.Insert(0, new Message() { Text = "Hi" });
+            Messages.Insert(0, new Message() { Text = "How are you?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "What's new?" });
+            Messages.Insert(0, new Message() { Text = "How is your family", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your dog?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your cat?", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "How is your sister?" });
+            Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
+            Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
+            Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
+            Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
+            Messages.Insert(0, new Message() { Text = "Oh My God!" });
+            Messages.Insert(0, new Message() { Text = " No Problem", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "Hugs and Kisses", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
+            Messages.Insert(0, new Message() { Text = "When we are going to meet?" });
+            Messages.Insert(0, new Message() { Text = "I want to buy a laptop" });
+            Messages.Insert(0, new Message() { Text = "Where I can find a good one?" });
+            Messages.Insert(0, new Message() { Text = "Also I'm testing this chat" });
+            Messages.Insert(0, new Message() { Text = "Oh My God!" });
+            Messages.Insert(0, new Message() { Text = " No Problem" });
+            Messages.Insert(0, new Message() { Text = "Hugs and Kisses" });
 
             //MessageAppearingCommand = new Command<Message>(OnMessageAppearing);
             //MessageDisappearingCommand = new Command<Message>(OnMessageDisappearing);
@@ -73,7 +73,7 @@ namespace XFCMAPP.Poll.ViewModels
             {
                 if (!string.IsNullOrEmpty(InputText))
                 {
-                    //Messages.Insert(0, new Message() { Text = InputText, User = "RAB" });
+                    //Messages.Insert(0, new Message() { Text = InputText, User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
                     SendCommand(InputText);
                     InputText = string.Empty;
                 }
@@ -85,11 +85,11 @@ namespace XFCMAPP.Poll.ViewModels
             //{
             //    if (LastMessageVisible)
             //    {
-            //        Messages.Insert(0, new Message() { Text = "New message test by rab", User = "RAB" });
+            //        Messages.Insert(0, new Message() { Text = "New message test by rab", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
             //    }
             //    else
             //    {
-            //        DelayedMessages.Enqueue(new Message() { Text = "New message test by rab", User = "RAB" });
+            //        DelayedMessages.Enqueue(new Message() { Text = "New message test by rab", User = MessageUserEnum.UserLogin.ToDescriptionAttr() });
             //        PendingMessageCount++;
             //    }
             //    return true;
