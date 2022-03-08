@@ -6,10 +6,8 @@ namespace XFCMAPP.Utility
 {
     public static class RapidProConstant
     {
-        public static string RapidProFcmUrl = "https://rapidpro.ilhasoft.mobi/c/fcm/";
-
-        public static string RapidProFcmRegisterUrl = RapidProFcmUrl + "4a2e5997-f435-4e20-829f-743b86ce0550/register";
-        public static string RapidProFcmReceiveUrl = RapidProFcmUrl + "4a2e5997-f435-4e20-829f-743b86ce0550/receive";
+        public static string RapidProFcmRegister = "/register";
+        public static string RapidProFcmReceive = "/receive";
 
         public static string NotFound = "Data not found.";
         public static string Error = "Oops! Exception in application.";

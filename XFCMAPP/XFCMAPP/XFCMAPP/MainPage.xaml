@@ -15,7 +15,6 @@
         <Button FontSize="16" Padding="10,20" Margin="20,5,20,5"  Text="Send End RapidPro" Clicked="BtnRapidProEnd_Clicked" />
 
         <Button FontSize="16" Padding="10,20" Margin="20,5,20,5"  Text="Go Chat Page" Clicked="BtnGoChatPage_Clicked" />
-        <Button FontSize="16" Padding="10,20" Margin="20,5,20,5"  Text="Go Poll Page" Clicked="BtnGoPollPage_Clicked" />
         
         <Label x:Name="LblMessage" Text="" FontSize="16" Padding="20,10,20,10"/>
 

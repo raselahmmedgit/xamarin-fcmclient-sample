@@ -13,6 +13,11 @@ namespace XFCMAPP.Service
         private const string RapidProStartMsgKey = "RapidProStartMsg";
         private const string RapidProLastMsgKey = "RapidProLastMsg";
 
+        private const string RapidProIsChatDatabaseKey = "RapidProIsChatDatabase";
+        private const string RapidProIsInitKey = "RapidProIsInit";
+        private const string RapidProIsInitMsgKey = "RapidProIsInitMsg";
+        private const string RapidProIsInitSendKey = "RapidProIsInitSend";
+
         #endregion
 
         #region Constructor
@@ -96,6 +101,70 @@ namespace XFCMAPP.Service
                 if (Application.Current.Properties != null)
                 {
                     Application.Current.Properties[RapidProLastMsgKey] = value;
+                    Application.Current.SavePropertiesAsync();
+                }
+            }
+        }
+
+        public bool RapidProIsChatDatabase
+        {
+            get
+            {
+                return Application.Current.Properties.ContainsKey(RapidProIsChatDatabaseKey) ? Convert.ToBoolean(Application.Current.Properties[RapidProIsChatDatabaseKey].ToString()) : false;
+            }
+            set
+            {
+                if (Application.Current.Properties != null)
+                {
+                    Application.Current.Properties[RapidProIsChatDatabaseKey] = value;
+                    Application.Current.SavePropertiesAsync();
+                }
+            }
+        }
+
+        public bool RapidProIsInit
+        {
+            get
+            {
+                return Application.Current.Properties.ContainsKey(RapidProIsInitKey) ? Convert.ToBoolean(Application.Current.Properties[RapidProIsInitKey].ToString()) : false;
+            }
+            set
+            {
+                if (Application.Current.Properties != null)
+                {
+                    Application.Current.Properties[RapidProIsInitKey] = value;
+                    Application.Current.SavePropertiesAsync();
+                }
+            }
+        }
+
+        public bool RapidProIsInitMsg
+        {
+            get
+            {
+                return Application.Current.Properties.ContainsKey(RapidProIsInitMsgKey) ? Convert.ToBoolean(Application.Current.Properties[RapidProIsInitMsgKey].ToString()) : false;
+            }
+            set
+            {
+                if (Application.Current.Properties != null)
+                {
+                    Application.Current.Properties[RapidProIsInitMsgKey] = value;
+                    Application.Current.SavePropertiesAsync();
+                }
+            }
+        }
+
+        public bool RapidProIsInitSend
+        {
+            get
+            {
+                return Application.Current.Properties.ContainsKey(RapidProIsInitSendKey) ? Convert.ToBoolean(Application.Current.Properties[RapidProIsInitSendKey].ToString()) : false;
+            }
+            set
+            {
+                if (Application.Current.Properties != null)
+                {
+                    Application.Current.Properties[RapidProIsInitSendKey] = value;
                     Application.Current.SavePropertiesAsync();
                 }
             }

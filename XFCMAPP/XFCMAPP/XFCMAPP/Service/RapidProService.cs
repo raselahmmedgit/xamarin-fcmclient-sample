@@ -18,10 +18,16 @@ namespace XFCMAPP.Service
             httpClient.MaxResponseContentBufferSize = 556000;
             return httpClient;
         }
+        private readonly FirebaseContainer _firebaseContainer;
 
         #endregion
 
         #region Constructor
+
+        public RapidProService()
+        {
+            _firebaseContainer = new FirebaseContainer();
+        }
 
         #endregion
 
@@ -39,7 +45,7 @@ namespace XFCMAPP.Service
                 };
                 var content = new FormUrlEncodedContent(values);
 
-                var restUrl = RapidProConstant.RapidProFcmRegisterUrl + "?urn=" + rapidProUrn + "&fcm_token=" + rapidProFcmToken;
+                var restUrl = _firebaseContainer.FirebaseChannelHost + _firebaseContainer.FirebaseChannelId + RapidProConstant.RapidProFcmRegister + "?urn=" + rapidProUrn + "&fcm_token=" + rapidProFcmToken;
                 var absoluteUrl = restUrl;
 
                 using (var httpClient = InitializeHttpClient())
@@ -76,7 +82,7 @@ namespace XFCMAPP.Service
                 };
                 var content = new FormUrlEncodedContent(values);
 
-                var restUrl = RapidProConstant.RapidProFcmReceiveUrl + "?from=fcm:" + rapidProUrn + "&msg=" + rapidProMsg + "&fcm_token=" + rapidProFcmToken;
+                var restUrl = _firebaseContainer.FirebaseChannelHost + _firebaseContainer.FirebaseChannelId + RapidProConstant.RapidProFcmReceive + "?from=fcm:" + rapidProUrn + "&msg=" + rapidProMsg + "&fcm_token=" + rapidProFcmToken;
                 var absoluteUrl = restUrl;
 
                 using (var httpClient = InitializeHttpClient())

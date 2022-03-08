@@ -49,11 +49,9 @@ namespace XFCMAPP.Chat
                     Device.BeginInvokeOnMainThread(() =>
                     {
                         vm.ShowScrollTap = false;
-                        vm.LastMessageVisible = true;
+                        //vm.LastMessageVisible = true;
                         ChatList?.ScrollToFirst();
                     });
-
-
                 }
 
             }
@@ -63,7 +61,6 @@ namespace XFCMAPP.Chat
         {
             chatInput.UnFocusEntry();
         }
-
         
         private void Current_OnNotificationAction(object source, FirebasePushNotificationResponseEventArgs e)
         {

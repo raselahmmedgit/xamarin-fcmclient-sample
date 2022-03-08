@@ -23,6 +23,7 @@ namespace XFCMAPP.Chat.ViewCells
                 Button btnActionSendCommand = (Button)sender;
                 if (btnActionSendCommand != null)
                 {
+                    chatPageViewModel.MessageId = btnActionSendCommand.ClassId.Trim().ToString();
                     chatPageViewModel.ActionInputText = btnActionSendCommand.Text.Trim().ToString();
                 }
                 chatPageViewModel.OnActionSendCommand.Execute(null);
