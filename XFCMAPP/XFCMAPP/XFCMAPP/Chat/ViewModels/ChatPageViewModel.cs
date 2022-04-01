@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -39,10 +38,13 @@ namespace XFCMAPP.Chat.ViewModels
         public ICommand MessageAppearingCommand { get; set; }
         public ICommand MessageDisappearingCommand { get; set; }
 
+        //private readonly IFirebaseRemoteConfigService _firebaseRemoteConfigService;
+
         public ChatPageViewModel()
         {
             _rapidProContainer = new RapidProContainer();
             _rapidProService = new RapidProService();
+            //_firebaseRemoteConfigService = new FirebaseRemoteConfigService();
 
             _firebaseContainer = new FirebaseContainer();
             if (string.IsNullOrEmpty(_firebaseContainer.FirebaseChannelHost) && string.IsNullOrEmpty(_firebaseContainer.FirebaseChannelId))

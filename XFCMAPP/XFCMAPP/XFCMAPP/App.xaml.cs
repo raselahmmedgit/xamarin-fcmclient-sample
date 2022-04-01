@@ -25,6 +25,8 @@ namespace XFCMAPP
             CrossFirebasePushNotification.Current.Subscribe("all");
             CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
 
+            
+
             RapidProContainer rapidProContainer = new RapidProContainer();
 
             if (string.IsNullOrEmpty(rapidProContainer.RapidProFcmToken))
